@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header CSS */
+
+.header {
+    padding: 1% 3%;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links li a.active {
+    color: #0065FC;
+}
+
+.nav-links li a.active::after {
+    content: "";
+    background-color: #0065FC;
+    width: 120%;
+    height: 2px;
+    position: absolute;
+    margin:-30px -10px ;
+    left: 0;
+    transition: width 0.5s;
+}
+
+
+/* Map CSS */
+
+.btn-primary {
+    background-color: #0065FC;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #0065FC;
+    border: 2px solid #0065FC;
+    cursor: pointer;
+}
+
+.input-icons {
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.map h3 {
+    margin-bottom: 5px;
+}
+
+.input-icons i {
+    position: absolute;
+    padding: 10PX;
+}
+
+.input-field {
+    width:200px;
+    padding: 8px;
+    padding-left: 30px;
+    border-radius: 30px;
+    font-family:inherit;
+    font-size: inherit;
+}
+
+/* Filters CSS */
+
+.filters{
+    width: 100%;
+    margin: 20px 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0% 3%;
+}
+
+.filters button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.filters button i {
+    background-color: #DEEBFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-filter {
+    background-color: white;
+    color: #0065FC;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding-right: 10px;
+    border-radius: 30px;
+    transition: .4s;
+    align-items: center;
+}
+
+.btn-filter:hover {
+    background-color: transparent;
+    color: #0065FC;
+    border: 2px solid #0065FC;
+    cursor: pointer;
+}
+
+.search-info i{
+    float: left;
+    padding-right: 10px;
+}
+
+.map{
+    padding: 0% 3%;
+}
+
+.search-info {
+    padding: 0% 3%;
+}
+
+/* Search results CSS */
+
+.search-results{
+    display: flex;
+    padding: 2% 3%;
+    max-width: 100%;
+}
+
+/* Accommodations CSS */
+
+.accommodations{
+    padding: 25px;
+    background-color:  #F2F2F2;
+    width: 70%;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.accommodations .wrapper{
+    
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accommodations .card:hover{
+    cursor: pointer;
+    color: #0065FC;
+    transform: scale(1.02);
+    transition: .4s;
+}
+
+.accommodations .wrapper .card {
+    width: 290px;
+    height: 240px;
+    padding: 10px;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.accommodations .wrapper .card img {
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card .info {
+    margin: 0 0 0 15px;
+}
+
+.card .info p {
+    color: black;
+    margin: 5px 0 5px 0;
+}
+
+.card .info p em {
+    color: black;
+    font-weight: bold;
+}
+
+/* Most Popular CSS */
+
+.most-popular{
+    padding: 20px;
+    background-color:  #F2F2F2;
+    width: 30%;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.most-popular .wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.most-popular .card:hover{
+    cursor: pointer;
+    color: #0065FC;
+    transform: scale(1.02);
+    transition: .4s;
+}
+
+.fa-star {
+    color: #d7d7d7;
+}
+
+.checked {
+    color: #0065FC;
+}
+
+.most-popular .wrapper .card {
+    width: 100%;
+    height: 170px;
+    padding: 10px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.most-popular .wrapper .card img {
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.most-popular .wrapper .card .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/* Activities CSS */
+
+.activities {
+    display: flex; 
+    flex-direction: row;
+    max-width: 100%;
+    height: 400px;
+    margin-top:10px;
+    padding: 0% 3%;
+}
+
+.item-0 {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.item-0:hover{
+    cursor: pointer;
+    color: #0065FC;
+    transform: scale(1.02);
+    transition: .4s;
+}
+
+.item-0 img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.item-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 30px 0 30px;
+}
+
+.one {
+    width: 100%;
+    height: 50%;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.one:hover{
+    cursor: pointer;
+    color: #0065FC;
+    transform: scale(1.02);
+    transition: .4s;
+}
+
+.two {
+    width: 100%;
+    height: 40%;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.two:hover{
+    cursor: pointer;
+    color: #0065FC;
+    transform: scale(1.02);
+    transition: .4s;
+}
+
+.item-1 img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title {
+    margin: 30px 0 20px 0;
+    padding: 0% 3%;
+}
+
+/* Footer CSS */
+
+footer {
+    margin-top: 30px;
+    width:100%;
+    height:200px;
+    position:relative;
+    bottom:0;
+    left:0;
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+h5 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.about{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.our-accommodation{
+    margin: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Assistance{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Media Queries CSS */
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        margin-left: 40px;
+    }
+
+    .nav-links li a.active::after {
+    content: "";
+    background-color: #0065FC;
+    width: 120%;
+    height: 2px;
+    position: absolute;
+    margin: 20px -10px ;
+    left: 0;
+    transition: width 0.5s;
+    }
+
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .search-results {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    }
+    .most-popular{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .accommodations{
+        padding: 25px;
+        background-color:  transparent;
+        width: 100%;
+    }
+
+    .accommodations .wrapper .card {
+        width: 100%;
+        height: 300px;
+    }
+
+    .activities {
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .item-0 {
+        width: 90%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .item-1 {
+        margin: 0;
+        width: 90%;
+        gap: 20px;
+    }
+    .one {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .two {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activities img {
+        height: 90%;
+        padding-bottom: 6px;
+    }
+
+    .title {
+        padding: 0% 6%;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .our-accommodation{
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .Assistance{
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    
+}
