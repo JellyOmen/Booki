@@ -34,26 +34,25 @@ nav {
 
 .nav-links li a {
     text-decoration: none;
-    color: black;
     padding: 5px 0;
     position: relative;
-}
-
-.nav-links li a.active {
     color: #0065FC;
 }
 
-.nav-links li a.active::after {
+.nav-links li a::after {
     content: "";
     background-color: #0065FC;
-    width: 120%;
+    width: 0%;
     height: 2px;
     position: absolute;
-    margin:-30px -10px ;
+    top: 0;
     left: 0;
     transition: width 0.5s;
 }
 
+.nav-links li a:hover::after {
+    width: 100%;
+}
 
 /* Map CSS */
 
@@ -429,7 +428,7 @@ h5 {
     gap: 5px;
 }
 
-a {
+.about a {
     text-decoration: none;
     color: black;
 }
@@ -460,15 +459,8 @@ a {
         margin-left: 40px;
     }
 
-    .nav-links li a.active::after {
-    content: "";
-    background-color: #0065FC;
-    width: 120%;
-    height: 2px;
-    position: absolute;
-    margin: 20px -10px ;
-    left: 0;
-    transition: width 0.5s;
+    .nav-links li a::after {
+        bottom: 0;
     }
 
     .filters{
